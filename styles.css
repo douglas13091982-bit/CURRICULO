@@ -145,16 +145,37 @@ button:focus-visible, [contenteditable]:focus-visible { outline: 3px solid rgba(
   body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .app-frame { width: 100%; padding: 0; }
   .topbar, .toast { display: none !important; }
-  .resume-shell { display: grid; width: 100%; max-width: none; min-height: 297mm; margin: 0; box-shadow: none; }
-  .rail { padding: 22px 27px 28px; }
-  .content-panel { padding: 48px 55px 28px; }
-  .identity-block { padding-top: 28px; }
-  .portrait-wrap { width: 118px; height: 118px; }
-  .name { font-size: 57px; }
-  .content-panel__header { padding-bottom: 28px; }
-  .display-title { font-size: 72px; }
-  .timeline { padding-top: 27px; }
-  .timeline-item { padding-bottom: 23px; }
-  .content-footer { margin-top: 29px; }
+  .resume-shell { display: grid; width: 100%; max-width: none; height: 297mm; min-height: 0; margin: 0; box-shadow: none; }
+  .rail { padding: 17px 22px 20px; }
+  .rail__topline { padding-bottom: 11px; }
+  .identity-block { padding: 20px 0 18px; }
+  .portrait-wrap { width: 100px; height: 100px; margin-bottom: 17px; }
+  .name { font-size: 49px; }
+  .role { margin-top: 12px; font-size: 10px; }
+  .bio { margin-top: 16px; font-size: 9px; line-height: 1.45; }
+  .rail-section { margin-top: 18px; }
+  .section-label { margin-bottom: 10px; padding-bottom: 7px; font-size: 11px; }
+  .contact-list { gap: 8px; }
+  .contact-item dt { margin-bottom: 3px; font-size: 8px; }
+  .contact-item dd, .education-copy, .course-list { font-size: 9px; }
+  .course-list { gap: 5px; }
+  .skills-section { margin-top: 21px; }
+  .skills-list { gap: 7px; }
+  .skill__meta { margin-bottom: 3px; font-size: 8px; }
+  .skill__track { height: 4px; }
+  .content-panel { padding: 34px 42px 20px; }
+  .content-panel__header { padding-bottom: 20px; }
+  .display-title { font-size: 61px; }
+  .timeline { padding-top: 20px; }
+  .timeline::before { top: 31px; bottom: 18px; }
+  .timeline-item { grid-template-columns: 106px 1fr; gap: 18px; padding: 0 0 13px 28px; }
+  .timeline-marker { top: 1px; }
+  .timeline-date { font-size: 9px; }
+  .timeline-copy h3 { margin-top: -1px; font-size: 16px; }
+  .timeline-copy p { font-size: 9px; }
+  .closing-note { margin-top: 2px; padding: 15px 0 10px; font-size: 11px; }
+  .closing-note__quote { font-size: 36px; }
+  .pillars span { padding: 5px 10px; font-size: 8px; }
+  .content-footer { margin-top: 18px; padding-top: 9px; font-size: 8px; }
   [contenteditable="true"] { outline: none !important; box-shadow: none !important; background: transparent !important; }
 }
