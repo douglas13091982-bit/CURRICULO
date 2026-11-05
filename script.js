@@ -42,6 +42,14 @@
     return true;
   };
 
+  const ensureLatestContact = () => {
+    const contactList = resume.querySelector(".contact-list");
+    if (!contactList || contactList.querySelector('[data-contact="instagram"]')) return false;
+    contactList.insertAdjacentHTML("beforeend", `
+      <div class="contact-item" data-contact="instagram"><dt data-editable>INSTAGRAM</dt><dd data-editable>@seuinstagram</dd></div>`);
+    return true;
+  };
+
   const setEditing = (nextState) => {
     isEditing = nextState;
     resume.classList.toggle("is-editing", isEditing);
@@ -82,7 +90,9 @@
       const savedMarkup = localStorage.getItem(STORAGE_KEY);
       if (savedMarkup) {
         resume.innerHTML = savedMarkup;
-        if (ensureLatestExperience()) save(false);
+        const migratedExperience = ensureLatestExperience();
+        const migratedContact = ensureLatestContact();
+        if (migratedExperience || migratedContact) save(false);
         showToast("Suas últimas alterações foram carregadas.");
       }
     } catch (error) {
