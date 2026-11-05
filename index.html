@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#081525" />
+    <meta name="description" content="Currículo online de Douglas Jelinsky, Técnico em Segurança." />
+    <title>Douglas Jelinsky · Currículo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-frame">
+      <header class="topbar" aria-label="Controles do currículo">
+        <div class="topbar__brand">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span>CURRÍCULO ONLINE</span>
+        </div>
+        <div class="topbar__actions">
+          <span class="edit-state" id="editState" role="status">Visualização protegida</span>
+          <button class="button button--quiet" id="restoreButton" type="button" hidden>Restaurar original</button>
+          <button class="button button--primary" id="editButton" type="button">Editar currículo</button>
+          <button class="button button--outline" id="printButton" type="button">Baixar / imprimir PDF</button>
+        </div>
+      </header>
+
+      <main class="resume-shell" id="resume">
+        <aside class="rail">
+          <div class="rail__topline"><span>DJ / 01</span><span>CV · 2026</span></div>
+
+          <section class="identity-block" aria-label="Identidade profissional">
+            <div class="portrait-wrap">
+              <img src="/assets/curriculo-img-000.png" alt="Foto de Douglas Jelinsky" class="portrait" />
+              <span class="portrait-ring" aria-hidden="true"></span>
+            </div>
+            <p class="kicker kicker--light" data-editable>PERFIL PROFISSIONAL</p>
+            <h1 class="name" data-editable>DOUGLAS<br />JELINSKY</h1>
+            <p class="role" data-editable>TÉCNICO EM SEGURANÇA</p>
+            <p class="bio" data-editable>Profissional dedicado e comprometido, com sólida experiência em segurança patrimonial e militar, focado em soluções eficientes e resultados na proteção de pessoas e patrimônio.</p>
+          </section>
+
+          <section class="rail-section" aria-label="Contato">
+            <div class="section-label section-label--light"><span class="section-index">01</span><span data-editable>CONTATO</span></div>
+            <dl class="contact-list">
+              <div class="contact-item"><dt data-editable>WHATSAPP</dt><dd data-editable>47 99925-9134</dd></div>
+              <div class="contact-item"><dt data-editable>E-MAIL</dt><dd data-editable>douglas13091982@gmail.com</dd></div>
+              <div class="contact-item"><dt data-editable>ENDEREÇO</dt><dd data-editable>Rua Ponte Serrana, nº 793<br />Comasa · Joinville/SC</dd></div>
+              <div class="contact-item"><dt data-editable>FACEBOOK</dt><dd data-editable>Douglas Jelinsky</dd></div>
+            </dl>
+          </section>
+
+          <section class="rail-section" aria-label="Educação">
+            <div class="section-label section-label--light"><span class="section-index">02</span><span data-editable>EDUCAÇÃO</span></div>
+            <div class="education-copy" data-editable><strong>2º Grau Completo</strong><br />Técnico em Segurança<br />do Trabalho</div>
+          </section>
+
+          <section class="rail-section" aria-label="Cursos">
+            <div class="section-label section-label--light"><span class="section-index">03</span><span data-editable>CURSOS</span></div>
+            <ul class="course-list">
+              <li data-editable>Informática Avançado</li>
+              <li data-editable>Técnico em Segurança do Trabalho</li>
+              <li data-editable>Segurança Pessoal Privada</li>
+              <li data-editable>Supervisor</li>
+              <li data-editable>Escolta Armada</li>
+            </ul>
+          </section>
+
+          <section class="rail-section skills-section" aria-label="Habilidades">
+            <div class="section-label section-label--light"><span class="section-index">04</span><span data-editable>HABILIDADES</span></div>
+            <div class="skills-list">
+              <div class="skill" data-skill="Desenvolvedor"><div class="skill__meta"><span data-editable>DESENVOLVEDOR</span><span data-editable>60%</span></div><div class="skill__track"><span style="--level: 60%"></span></div></div>
+              <div class="skill" data-skill="Scrum"><div class="skill__meta"><span data-editable>SCRUM</span><span data-editable>70%</span></div><div class="skill__track"><span style="--level: 70%"></span></div></div>
+              <div class="skill" data-skill="Inteligência Artificial"><div class="skill__meta"><span data-editable>INTELIGÊNCIA ARTIFICIAL</span><span data-editable>50%</span></div><div class="skill__track"><span style="--level: 50%"></span></div></div>
+              <div class="skill" data-skill="Excel"><div class="skill__meta"><span data-editable>EXCEL</span><span data-editable>70%</span></div><div class="skill__track"><span style="--level: 70%"></span></div></div>
+              <div class="skill" data-skill="Power Point"><div class="skill__meta"><span data-editable>POWER POINT</span><span data-editable>70%</span></div><div class="skill__track"><span style="--level: 70%"></span></div></div>
+              <div class="skill" data-skill="Facebook Ads"><div class="skill__meta"><span data-editable>FACEBOOK ADS</span><span data-editable>60%</span></div><div class="skill__track"><span style="--level: 60%"></span></div></div>
+              <div class="skill" data-skill="Regularizar"><div class="skill__meta"><span data-editable>REGULARIZAR</span><span data-editable>70%</span></div><div class="skill__track"><span style="--level: 70%"></span></div></div>
+              <div class="skill" data-skill="WordPress"><div class="skill__meta"><span data-editable>WORDPRESS</span><span data-editable>85%</span></div><div class="skill__track"><span style="--level: 85%"></span></div></div>
+              <div class="skill" data-skill="CRM"><div class="skill__meta"><span data-editable>CRM</span><span data-editable>70%</span></div><div class="skill__track"><span style="--level: 70%"></span></div></div>
+              <div class="skill" data-skill="Designer"><div class="skill__meta"><span data-editable>DESIGNER</span><span data-editable>75%</span></div><div class="skill__track"><span style="--level: 75%"></span></div></div>
+            </div>
+          </section>
+        </aside>
+
+        <section class="content-panel">
+          <div class="content-panel__header">
+            <div>
+              <p class="kicker" data-editable>TRAJETÓRIA PROFISSIONAL</p>
+              <h2 class="display-title" data-editable>EXPERIÊNCIA<br /><em>PROFISSIONAL</em></h2>
+            </div>
+            <div class="header-stamp" aria-label="Disponibilidade profissional"><span class="header-stamp__mark">+</span><span data-editable>SEGURANÇA<br />PATRIMONIAL<br />& MILITAR</span></div>
+          </div>
+
+          <div class="timeline" aria-label="Experiência profissional">
+            <article class="timeline-item">
+              <div class="timeline-marker"><span></span></div>
+              <div class="timeline-date" data-editable>30/10/2025<br />a 27/02/2026</div>
+              <div class="timeline-copy"><h3 data-editable>ORBENK</h3><p data-editable>Supervisor de Segurança</p></div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-marker"><span></span></div>
+              <div class="timeline-date" data-editable>24/02/2001<br />a 03/11/2024</div>
+              <div class="timeline-copy"><h3 data-editable>EXÉRCITO BRASILEIRO</h3><p data-editable>Exército do Pelotão de Operações Especiais</p></div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-marker"><span></span></div>
+              <div class="timeline-date" data-editable>24/02/2001<br />a 03/12/2024</div>
+              <div class="timeline-copy"><h3 data-editable>GERENCIAMENTO DE SERVIÇOS PATRIMONIAIS</h3><p data-editable>Supervisor de Segurança / Técnica de Sistemas</p></div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-marker"><span></span></div>
+              <div class="timeline-date" data-editable>12/01/2010<br />a 11/07/2011</div>
+              <div class="timeline-copy"><h3 data-editable>ORDESUPS</h3><p data-editable>Aux. Supervisor de Segurança</p></div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-marker"><span></span></div>
+              <div class="timeline-date" data-editable>01/05/2012<br />a 18/01/2013</div>
+              <div class="timeline-copy"><h3 data-editable>MÓS DO BRASIL</h3><p data-editable>Técnico em Segurança do Trabalho</p></div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-marker"><span></span></div>
+              <div class="timeline-date" data-editable>23/01/2013<br />a 15/08/2013</div>
+              <div class="timeline-copy"><h3 data-editable>EP ENGENHARIA DO PROCESSO</h3><p data-editable>Técnico em Segurança do Trabalho</p></div>
+            </article>
+          </div>
+
+          <div class="closing-note">
+            <span class="closing-note__quote">“</span>
+            <p data-editable>Disciplina, foco e comprometimento<br />são a chave para grandes conquistas.</p>
+          </div>
+          <div class="pillars" aria-label="Pilares profissionais">
+            <span data-editable>FOCO</span><span data-editable>COMPROMETIMENTO</span><span data-editable>RESULTADOS</span>
+          </div>
+          <footer class="content-footer"><span data-editable>DOUGLAS JELINSKY</span><span data-editable>PROFISSIONAL DE SEGURANÇA</span><span>01 / 01</span></footer>
+        </section>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="/script.js"></script>
+  </body>
+</html>
