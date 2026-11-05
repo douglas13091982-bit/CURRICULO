@@ -19,7 +19,7 @@
           <span>CURRÍCULO ONLINE</span>
         </div>
         <div class="topbar__actions">
-          <span class="edit-state" id="editState" role="status">Visualização protegida</span>
+          <span class="edit-state" id="editState" role="status">Modo de visualização</span>
           <button class="button button--quiet" id="restoreButton" type="button" hidden>Restaurar original</button>
           <button class="button button--primary" id="editButton" type="button">Editar currículo</button>
           <button class="button button--outline" id="printButton" type="button">Baixar / imprimir PDF</button>
@@ -28,7 +28,7 @@
 
       <main class="resume-shell" id="resume">
         <aside class="rail">
-          <div class="rail__topline"><span>DJ / 01</span><span>CV · 2026</span></div>
+          <div class="rail__topline"><span>CURRÍCULO</span><span>APRESENTAÇÃO PROFISSIONAL</span></div>
 
           <section class="identity-block" aria-label="Identidade profissional">
             <div class="portrait-wrap">
@@ -38,7 +38,7 @@
             <p class="kicker kicker--light" data-editable>PERFIL PROFISSIONAL</p>
             <h1 class="name" data-editable>DOUGLAS <br />JELINSKY</h1>
             <p class="role" data-editable>TÉCNICO EM SEGURANÇA</p>
-            <p class="bio" data-editable>Profissional dedicado e comprometido, com sólida experiência em segurança patrimonial e militar, focado em soluções eficientes e resultados na proteção de pessoas e patrimônio.</p>
+            <p class="bio" data-editable>Profissional dedicado e comprometido, com experiência em supervisão de equipes, segurança patrimonial e gestão operacional, orientado à organização, eficiência e resultados.</p>
           </section>
 
           <section class="rail-section" aria-label="Contato">
@@ -65,7 +65,7 @@
               <li data-editable>Segurança Pessoal Privada</li>
               <li data-editable>Supervisor</li>
               <li data-editable>Escolta Armada</li>
-            </ul>
+            </ul><button class="button button--outline editor-only" id="addCourseButton" type="button">+ Adicionar curso</button>
           </section>
 
           <section class="rail-section skills-section" aria-label="Habilidades">
@@ -81,7 +81,7 @@
               <div class="skill" data-skill="WordPress"><div class="skill__meta"><span data-editable>WORDPRESS</span><span data-editable>85%</span></div><div class="skill__track"><span style="--level: 85%"></span></div></div>
               <div class="skill" data-skill="CRM"><div class="skill__meta"><span data-editable>CRM</span><span data-editable>70%</span></div><div class="skill__track"><span style="--level: 70%"></span></div></div>
               <div class="skill" data-skill="Designer"><div class="skill__meta"><span data-editable>DESIGNER</span><span data-editable>75%</span></div><div class="skill__track"><span style="--level: 75%"></span></div></div>
-            </div>
+            </div><button class="button button--outline editor-only" id="addSkillButton" type="button">+ Adicionar habilidade</button>
           </section>
         </aside>
 
@@ -91,10 +91,10 @@
               <p class="kicker" data-editable>TRAJETÓRIA PROFISSIONAL</p>
               <h2 class="display-title" data-editable>EXPERIÊNCIA<br /><em>PROFISSIONAL</em></h2>
             </div>
-            <div class="header-stamp" aria-label="Disponibilidade profissional"><span class="header-stamp__mark">+</span><span data-editable>SEGURANÇA<br />PATRIMONIAL<br />& MILITAR</span></div>
+            <div class="header-stamp" aria-label="Disponibilidade profissional"><span class="header-stamp__mark">+</span><span data-editable>GESTÃO<br />OPERAÇÕES<br />& RESULTADOS</span></div>
           </div>
 
-          <div class="timeline" aria-label="Experiência profissional">
+          <div class="timeline-actions"><button class="button button--outline editor-only" id="addExperienceButton" type="button">+ Adicionar experiência</button></div><div class="timeline" aria-label="Experiência profissional">
             <article class="timeline-item">
               <div class="timeline-marker"><span></span></div>
               <div class="timeline-date" data-editable>30/10/2025<br />a 27/02/2026</div>
@@ -139,7 +139,7 @@
           <div class="pillars" aria-label="Pilares profissionais">
             <span data-editable>FOCO</span><span data-editable>COMPROMETIMENTO</span><span data-editable>RESULTADOS</span>
           </div>
-          <footer class="content-footer"><span data-editable>DOUGLAS JELINSKY</span><span data-editable>PROFISSIONAL DE SEGURANÇA</span><span>01 / 01</span></footer>
+          <footer class="content-footer"><span data-editable>DOUGLAS JELINSKY</span><span data-editable>PERFIL PROFISSIONAL</span><span>CURRÍCULO</span></footer>
         </section>
       </main>
     </div>
