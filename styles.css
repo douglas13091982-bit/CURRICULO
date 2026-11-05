@@ -180,3 +180,11 @@ button:focus-visible, [contenteditable]:focus-visible { outline: 3px solid rgba(
   .content-footer { margin-top: 18px; padding-top: 9px; font-size: 8px; }
   [contenteditable="true"] { outline: none !important; box-shadow: none !important; background: transparent !important; }
 }
+
+/* Atualização visual profissional */
+:root{--navy-900:#14263c;--blue:#2563eb;--paper:#fff;--line:#e4eaf1;--shadow:0 24px 65px rgba(25,43,67,.14)}
+body{background:linear-gradient(145deg,#eaf0f7,#f7f9fc 65%)}
+.resume-shell{border-radius:18px;min-height:0}.rail{background:linear-gradient(165deg,#182d47,#0e1e32)}.content-panel{padding-top:68px}.name{line-height:.98;overflow-wrap:anywhere}.display-title{line-height:.94;overflow-wrap:anywhere}.timeline-item{border-radius:12px}.timeline-copy h3{line-height:1.15}.button{border-radius:9px}.pillars span{border-radius:999px}
+.editor-only{display:none;margin-top:12px}.is-editing .editor-only{display:inline-flex}.timeline-actions{margin-top:20px}.item-remove{display:none;border:0;background:#fee2e2;color:#991b1b;border-radius:6px;padding:5px 9px;font-size:11px;margin-top:8px;cursor:pointer}.is-editing .item-remove{display:inline-block}
+@media(max-width:700px){.resume-shell{border-radius:0}.name{font-size:clamp(32px,9vw,47px)}.content-panel{padding-top:35px}}
+@media print{@page{size:A4;margin:12mm}.resume-shell{height:auto;min-height:0;overflow:visible;border-radius:0}.editor-only,.item-remove{display:none!important}.timeline-item,.rail-section{break-inside:avoid}}
