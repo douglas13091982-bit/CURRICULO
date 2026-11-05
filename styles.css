@@ -188,3 +188,6 @@ body{background:linear-gradient(145deg,#eaf0f7,#f7f9fc 65%)}
 .editor-only{display:none;margin-top:12px}.is-editing .editor-only{display:inline-flex}.timeline-actions{margin-top:20px}.item-remove{display:none;border:0;background:#fee2e2;color:#991b1b;border-radius:6px;padding:5px 9px;font-size:11px;margin-top:8px;cursor:pointer}.is-editing .item-remove{display:inline-block}
 @media(max-width:700px){.resume-shell{border-radius:0}.name{font-size:clamp(32px,9vw,47px)}.content-panel{padding-top:35px}}
 @media print{@page{size:A4;margin:12mm}.resume-shell{height:auto;min-height:0;overflow:visible;border-radius:0}.editor-only,.item-remove{display:none!important}.timeline-item,.rail-section{break-inside:avoid}}
+
+/* Elementos removidos permanentemente da apresentação. */
+.header-stamp, .content-footer { display: none !important; }
