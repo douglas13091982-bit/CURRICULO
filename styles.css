@@ -180,3 +180,6 @@ button:focus-visible, [contenteditable]:focus-visible { outline: 3px solid rgba(
   .content-footer { margin-top: 18px; padding-top: 9px; font-size: 8px; }
   [contenteditable="true"] { outline: none !important; box-shadow: none !important; background: transparent !important; }
 }
+
+/* Elementos removidos permanentemente da apresentação. */
+.header-stamp, .content-footer { display: none !important; }
