@@ -59,6 +59,7 @@
     });
     editButton.textContent = isEditing ? "Concluir edição" : "Editar currículo";
     restoreButton.hidden = !isEditing;
+    syncRemoveButtons();
     editState.textContent = isEditing ? "Edição liberada · clique nos textos" : "Visualização protegida";
     if (isEditing) {
       showToast("Você pode clicar em qualquer texto azul para editar.");
@@ -102,6 +103,36 @@
     setEditing(false);
   };
 
+  const syncRemoveButtons = () => {
+    resume.querySelectorAll(".timeline-item, .course-list li, .skill").forEach(item => {
+      if (item.querySelector(":scope > .item-remove")) return;
+      const btn=document.createElement("button"); btn.type="button";btn.className="item-remove";btn.textContent="Excluir";item.appendChild(btn);
+    });
+  };
+  const addItem = (parent,node,prepend=false) => {
+    if (!isEditing) return;
+    if(prepend) parent.prepend(node); else parent.appendChild(node);
+    node.querySelectorAll("[data-editable]").forEach(el=>{el.contentEditable="true";el.spellcheck=true});
+    syncRemoveButtons();save(false);
+    (node.querySelector("[data-editable]")||node).focus();
+  };
+  resume.addEventListener("click",event=>{
+    const btn=event.target.closest(".item-remove");if(!btn||!isEditing)return;
+    const item=btn.closest(".timeline-item, .course-list li, .skill");
+    if(item&&window.confirm("Excluir este item?")){item.remove();save(false);showToast("Item excluído.");}
+  });
+  document.querySelector("#addExperienceButton").addEventListener("click",()=>{
+    const node=document.createElement("article");node.className="timeline-item";
+    node.innerHTML='<div class="timeline-marker"><span></span></div><div class="timeline-date" data-editable>Período</div><div class="timeline-copy"><h3 data-editable>Nova empresa</h3><p data-editable>Cargo ou atividade</p></div>';
+    addItem(resume.querySelector(".timeline"),node,true);
+  });
+  document.querySelector("#addCourseButton").addEventListener("click",()=>{
+    const node=document.createElement("li");node.setAttribute("data-editable","");node.textContent="Novo curso";addItem(resume.querySelector(".course-list"),node);
+  });
+  document.querySelector("#addSkillButton").addEventListener("click",()=>{
+    const node=document.createElement("div");node.className="skill";node.innerHTML='<div class="skill__meta"><span data-editable>NOVA HABILIDADE</span><span data-editable>70%</span></div><div class="skill__track"><span style="--level:70%"></span></div>';
+    addItem(resume.querySelector(".skills-list"),node);
+  });
   let saveTimer;
   resume.addEventListener("input", () => {
     updateSkillBars();
