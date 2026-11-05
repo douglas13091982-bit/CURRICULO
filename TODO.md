@@ -3,6 +3,7 @@
 - [ ] **Apresentar o currículo completo em uma única página responsiva**
   - Usar todas as informações disponíveis no currículo fornecido: perfil, contato, endereço, Facebook, educação, cursos, habilidades com percentuais, experiências profissionais, frase de destaque e os marcadores Foco / Comprometimento / Resultados.
   - Incluir também a experiência adicional: Tratamento e Pintura — Almoxarife — 04/02/2019 a 12/01/2020.
+  - Disponibilizar o campo INSTAGRAM com o arroba editável pelo usuário.
   - Manter a direção visual aprovada de painel operacional, com fundo azul-marinho, acentos em azul elétrico, coluna lateral e linha do tempo vertical.
 
 - [ ] **Oferecer edição direta no navegador sem login**
