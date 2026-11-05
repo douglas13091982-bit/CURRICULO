@@ -50,6 +50,10 @@
     return true;
   };
 
+  const removeObsoleteLabels = () => {
+    resume.querySelectorAll(".header-stamp, .content-footer").forEach((node) => node.remove());
+  };
+
   const setEditing = (nextState) => {
     isEditing = nextState;
     resume.classList.toggle("is-editing", isEditing);
@@ -91,8 +95,10 @@
       if (savedMarkup) {
         resume.innerHTML = savedMarkup;
         const migratedExperience = ensureLatestExperience();
+        const hadObsoleteLabels = !!resume.querySelector(".header-stamp, .content-footer");
+        removeObsoleteLabels();
         const migratedContact = ensureLatestContact();
-        if (migratedExperience || migratedContact) save(false);
+        if (migratedExperience || migratedContact || hadObsoleteLabels) save(false);
         showToast("Suas últimas alterações foram carregadas.");
       }
     } catch (error) {
