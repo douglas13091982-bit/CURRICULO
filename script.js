@@ -28,6 +28,20 @@
     });
   };
 
+  const ensureLatestExperience = () => {
+    const timeline = resume.querySelector(".timeline");
+    if (!timeline || timeline.querySelector('[data-experience="almoxarife"]')) return false;
+    const newExperience = `
+      <article class="timeline-item" data-experience="almoxarife">
+        <div class="timeline-marker"><span></span></div>
+        <div class="timeline-date" data-editable>04/02/2019<br />a 12/01/2020</div>
+        <div class="timeline-copy"><h3 data-editable>TRATAMENTO E PINTURA</h3><p data-editable>Almoxarife</p></div>
+      </article>`;
+    const existingItems = timeline.querySelectorAll(".timeline-item");
+    (existingItems[2] || existingItems[existingItems.length - 1]).insertAdjacentHTML("afterend", newExperience);
+    return true;
+  };
+
   const setEditing = (nextState) => {
     isEditing = nextState;
     resume.classList.toggle("is-editing", isEditing);
@@ -68,6 +82,7 @@
       const savedMarkup = localStorage.getItem(STORAGE_KEY);
       if (savedMarkup) {
         resume.innerHTML = savedMarkup;
+        if (ensureLatestExperience()) save(false);
         showToast("Suas últimas alterações foram carregadas.");
       }
     } catch (error) {
